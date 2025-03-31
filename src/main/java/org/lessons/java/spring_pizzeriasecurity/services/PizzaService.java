@@ -1,11 +1,11 @@
-package org.lessons.java.spring_pizzeriawebapi.services;
+package org.lessons.java.spring_pizzeriasecurity.services;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import org.lessons.java.spring_pizzeriawebapi.models.Pizza;
-import org.lessons.java.spring_pizzeriawebapi.repository.PizzaRepository;
+import org.lessons.java.spring_pizzeriasecurity.models.Pizza;
+import org.lessons.java.spring_pizzeriasecurity.repository.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

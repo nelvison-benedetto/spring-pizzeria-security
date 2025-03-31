@@ -1,10 +1,10 @@
-package org.lessons.java.spring_pizzeriawebapi.controllers;
+package org.lessons.java.spring_pizzeriasecurity.controllers;
 
 import java.util.List;
 import java.util.Optional;
 
-import org.lessons.java.spring_pizzeriawebapi.models.Pizza;
-import org.lessons.java.spring_pizzeriawebapi.services.PizzaService;
+import org.lessons.java.spring_pizzeriasecurity.models.Pizza;
+import org.lessons.java.spring_pizzeriasecurity.services.PizzaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

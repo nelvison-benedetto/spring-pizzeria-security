@@ -1,4 +1,4 @@
-package org.lessons.java.spring_pizzeriawebapi.seeders;
+package org.lessons.java.spring_pizzeriasecurity.seeders;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -7,8 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.lessons.java.spring_pizzeriawebapi.models.Pizza;
-import org.lessons.java.spring_pizzeriawebapi.repository.PizzaRepository;
+import org.lessons.java.spring_pizzeriasecurity.models.Pizza;
+import org.lessons.java.spring_pizzeriasecurity.repository.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

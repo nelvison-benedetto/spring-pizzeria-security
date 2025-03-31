@@ -1,4 +1,4 @@
-package org.lessons.java.spring_pizzeriawebapi;
+package org.lessons.java.spring_pizzeriasecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.github.cdimascio.dotenv.Dotenv;
 
 @SpringBootApplication
-public class SpringPizzeriaWebApiApplication {
+public class SpringPizzeriaSecurityApplication {
 
 	public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class SpringPizzeriaWebApiApplication {
         System.setProperty("SPRING_DATASOURCE_USERNAME", dotenv.get("SPRING_DATASOURCE_USERNAME"));
         System.setProperty("SPRING_DATASOURCE_PASSWORD", dotenv.get("SPRING_DATASOURCE_PASSWORD"));
 
-		SpringApplication.run(SpringPizzeriaWebApiApplication.class, args);
+		SpringApplication.run(SpringPizzeriaSecurityApplication.class, args);
 	}
 
 }

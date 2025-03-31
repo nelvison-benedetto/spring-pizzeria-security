@@ -1,12 +1,12 @@
-package org.lessons.java.spring_pizzeriawebapi.controllers;
+package org.lessons.java.spring_pizzeriasecurity.controllers;
 
 import java.util.List;
 import java.util.Set;
 
-import org.lessons.java.spring_pizzeriawebapi.models.Ingredient;
-import org.lessons.java.spring_pizzeriawebapi.models.Pizza;
-import org.lessons.java.spring_pizzeriawebapi.repository.IngredientRepository;
-import org.lessons.java.spring_pizzeriawebapi.repository.PizzaRepository;
+import org.lessons.java.spring_pizzeriasecurity.models.Ingredient;
+import org.lessons.java.spring_pizzeriasecurity.models.Pizza;
+import org.lessons.java.spring_pizzeriasecurity.repository.IngredientRepository;
+import org.lessons.java.spring_pizzeriasecurity.repository.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package org.lessons.java.spring_pizzeriawebapi.seeders;
+package org.lessons.java.spring_pizzeriasecurity.seeders;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,10 +6,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.lessons.java.spring_pizzeriawebapi.models.Ingredient;
-import org.lessons.java.spring_pizzeriawebapi.models.SpecialOffer;
-import org.lessons.java.spring_pizzeriawebapi.repository.IngredientRepository;
-import org.lessons.java.spring_pizzeriawebapi.repository.PizzaRepository;
+import org.lessons.java.spring_pizzeriasecurity.models.Ingredient;
+import org.lessons.java.spring_pizzeriasecurity.models.SpecialOffer;
+import org.lessons.java.spring_pizzeriasecurity.repository.IngredientRepository;
+import org.lessons.java.spring_pizzeriasecurity.repository.PizzaRepository;
 import org.springframework.stereotype.Component;
 
 import net.datafaker.Faker;

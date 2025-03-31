@@ -1,4 +1,4 @@
-package org.lessons.java.spring_pizzeriawebapi.models;
+package org.lessons.java.spring_pizzeriasecurity.models;
 
 import java.io.Serializable;
 import java.util.ArrayList;

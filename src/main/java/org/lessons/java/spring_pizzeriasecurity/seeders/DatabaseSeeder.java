@@ -1,7 +1,7 @@
-package org.lessons.java.spring_pizzeriawebapi.seeders;
+package org.lessons.java.spring_pizzeriasecurity.seeders;
 
 import org.hibernate.annotations.Comment;
-import org.lessons.java.spring_pizzeriawebapi.seeders.IngredientSeeder;
+import org.lessons.java.spring_pizzeriasecurity.seeders.IngredientSeeder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,7 @@ public class DatabaseSeeder implements CommandLineRunner{
     @Override
     public void run(String... args){
         pizzaSeeder.seed();
-        reviewSeeder.seed(5);
+        reviewSeeder.seed(15);
         specialOfferSeeder.seed();
         ingredientSeeder.seed();
     }
