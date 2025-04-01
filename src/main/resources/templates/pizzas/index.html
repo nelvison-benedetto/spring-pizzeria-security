@@ -7,16 +7,27 @@
     <th:block th:replace="~{fragments/head.html::bootstrap}" />  <!-- ~ :  Alt+126(numerini)-->
     <th:block th:replace="~{fragments/head.html::style_jsscript}" />
 </head>
-<body class=" pizzas-bg">
+<body class=" pizzas-bg ">
     
     <header th:replace="~{fragments/layout::header}"/>
 
     <div class="container">
 
         <div class="text-end">
-            <a th:href="@{/ingredients}" class="btn btn-warning text-primary mb-4">Ingredients 🌎</a>
-            <a th:href="@{/pizzas/create}" class="btn btn-primary mb-4">Create New Pizza 🍕</a>
+            <a th:href="@{/ingredients}" class="btn btn-warning text-primary mb-4" sec:authorize="hasAuthority('ADMIN')">Ingredients 🌎</a>
+            <a th:href="@{/pizzas/create}" class="btn btn-primary mb-4" sec:authorize="hasAuthority('ADMIN')">Create New Pizza 🍕</a>  <!--SEE THIS ONLY IF UR A ADMIN!!-->
         </div>
+
+        <!--SECURITY-->
+        <h2 class="fw-bold text-white mb-4"> 
+            <span>Hello, </span>
+            <!-- <span th:text="|${username}|" class="text-decoration-underline" />  is the same as that below-->
+            <span sec:authentication="name" class="text-decoration-underline"></span>
+            <span sec:authentication="principal.authorities"></span>
+            <a href="/logout" class="btn btn-primary ms-2">Sign out</a>
+        </h2>
+        <!---->
+
         <form th:action="@{/pizzas/searchByForm}" method="get" class="card rounded p-4 bg-blacktransparent text-white mb-4">
             <h3 class="fs-2">Filter by</h3>
             <div class="row mb-2">
@@ -66,9 +77,9 @@
                             <p th:text="${pizza.content}" class="card-text" />
 
                             <div class="d-flex flex-column" style="margin: 0.0rem 0 0 0;">
-                                <a th:href="@{/pizzas/edit/{id}(id=${pizza.id} )}" th:text="|Edit your pizza!|" />
-                                <a th:href="@{/reviews/{id}/form(id=${pizza.id} )}" th:text="|Form add new review!|" />
-                                <a th:href="@{/specialoffers/{id}/form(id=${pizza.id} )}" th:text="|Form add new specialoffer!|" />
+                                <a th:href="@{/pizzas/edit/{id}(id=${pizza.id} )}" th:text="|Edit your pizza!|" sec:authorize="hasAuthority('ADMIN')" />
+                                <a th:href="@{/reviews/{id}/form(id=${pizza.id} )}" th:text="|Form add new review!|" sec:authorize="hasAuthority('ADMIN')" />
+                                <a th:href="@{/specialoffers/{id}/form(id=${pizza.id} )}" th:text="|Form add new specialoffer!|" sec:authorize="hasAuthority('ADMIN')" />
                                 
                             </div>
                             <div class="position-absolute d-flex text-end gap-1" style="bottom: 1rem; right:1rem; padding-left: 1rem;">
@@ -80,7 +91,7 @@
                                     <span class="btn-text  d-xs-inline  d-sm-none d-md-inline  d-lg-inline d-xl-inline">View more</span>
                                     <i class="bi bi-info-circle-fill  d-none d-sm-inline d-md-none  d-lg-none  d-xl-none"></i>
                                 </a>
-                                <form th:action="@{pizzas/delete/{id}(id=${pizza.id})}" method="post" class="d-inline">
+                                <form th:action="@{pizzas/delete/{id}(id=${pizza.id})}" method="post" class="d-inline" sec:authorize="hasAuthority('ADMIN')">
                                     <!-- <input type="hidden" name="_method" value="delete" /> -->
                                     <button type="submit" class="btn btn-danger">
                                         <i class="bi bi-trash3-fill"></i>

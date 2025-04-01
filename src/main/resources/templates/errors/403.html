@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Custom Page</title>
+    <th:block th:replace="~{fragments/head.html::bootstrap}" />  <!-- ~ :  Alt+126(numerini)-->
+    <th:block th:replace="~{fragments/head.html::style_jsscript}" />
+</head>
+<body class="debug">
+    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+        <h2 class="mb-3">403 Custom Page</h2>
+        <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+            <p>You don't have permission to access this page.</p>
+            <a href="/" class="btn btn-primary">Go back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

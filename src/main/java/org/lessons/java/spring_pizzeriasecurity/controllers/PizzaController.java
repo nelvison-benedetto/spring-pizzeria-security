@@ -14,6 +14,7 @@ import org.lessons.java.spring_pizzeriasecurity.repository.PizzaRepository;
 import org.lessons.java.spring_pizzeriasecurity.repository.SpecialOfferRepository;
 import org.lessons.java.spring_pizzeriasecurity.services.PizzaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -43,9 +44,10 @@ public class PizzaController {
     }
 
     @GetMapping  //without path is a get to '/pizzas'
-    public String pizzasIndex(Model model){
+    public String pizzasIndex(Authentication auth, Model model){  //ADD AUTHENTICATION(from 'security.core'!!!)
         List<Pizza> pizzas = pizzaService.findAll();  //.find() can return empty but never null!
         model.addAttribute("pizzas", pizzas);  
+        model.addAttribute("username", auth.getName());  //SECURITY, added x show username
         return "pizzas/index";
     }
 
