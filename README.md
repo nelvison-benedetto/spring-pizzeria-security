@@ -4,6 +4,8 @@
 **Usernames and Passwords for authentication:**
 - **personAdmin**: `12345678`
 - **personNoAdmin**: `12345678`
+
+
 **Environment Variables in your .env file:**
 - **SPRING_DATASOURCE_USERNAME**: `your db username`
 - **SPRING_DATASOURCE_PASSWORD**: `your db password`
