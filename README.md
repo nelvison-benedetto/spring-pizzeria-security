@@ -1,6 +1,6 @@
 ## Spring Pizzeria Security
 
-## 📍 !Important
+## 🍕!Important
 **Usernames and Passwords for authentication:**
 - **personAdmin**: `12345678`
 - **personNoAdmin**: `12345678`
